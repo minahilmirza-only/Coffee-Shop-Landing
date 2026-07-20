@@ -1,6 +1,11 @@
-body{
-    background-color: beige;
+body {
+    background-color: #F0E6D8;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+}
+
+header {
+    background-color: #5A4632;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
