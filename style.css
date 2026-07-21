@@ -1,11 +1,26 @@
-body {
-    background-color: #F0E6D8;
-    font-family: Arial, sans-serif;
+/* 1. Remove list dots and default padding */
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-header {
-    background-color: #5A4632;
-    color: white;
-    text-align: center;
-    padding: 20px;
+/* 2. Align checkbox, image, and text in a neat horizontal row */
+.menu li {
+    display: flex;
+    align-items: center; /* Vertically centers everything in the line */
+    gap: 12px;           /* Adds equal spacing between checkbox, image, and text */
+    margin-bottom: 15px; /* Adds space between each item so they don't stack roughly */
+}
+
+/* 3. Ensure images stay neat and well-proportioned */
+.menu img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;      /* Prevents image from shrinking on smaller screens */
+}
+body{
+    background-color: antiquewhite;
 }
