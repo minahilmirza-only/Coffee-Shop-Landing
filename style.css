@@ -1,26 +1,20 @@
-/* 1. Remove list dots and default padding */
 .menu ul {
-    list-style: none;
     padding: 0;
     margin: 0;
 }
 
-/* 2. Align checkbox, image, and text in a neat horizontal row */
 .menu li {
     display: flex;
-    align-items: center; /* Vertically centers everything in the line */
-    gap: 12px;           /* Adds equal spacing between checkbox, image, and text */
-    margin-bottom: 15px; /* Adds space between each item so they don't stack roughly */
+    align-items: center; 
+    gap: 12px;           
+    margin-bottom: 15px;
 }
 
-/* 3. Ensure images stay neat and well-proportioned */
 .menu img {
     width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 8px;
-    flex-shrink: 0;      /* Prevents image from shrinking on smaller screens */
+    height: 60px; 
 }
+
 body{
     background-color: rgb(165, 130, 42); 
     color:bisque;
