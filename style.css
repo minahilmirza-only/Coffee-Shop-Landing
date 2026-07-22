@@ -22,5 +22,6 @@
     flex-shrink: 0;      /* Prevents image from shrinking on smaller screens */
 }
 body{
-    background-color: antiquewhite;
+    background-color: rgb(165, 130, 42); 
+    color:bisque;
 }
