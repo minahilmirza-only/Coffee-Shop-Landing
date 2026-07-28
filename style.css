@@ -1,5 +1,5 @@
 .menu ul {
-    padding: 0;
+    padding: 10px;
     margin: 0;
 }
 
@@ -16,6 +16,43 @@
 }
 
 body{
-    background-color: rgb(165, 130, 42); 
+    background-color: rgb(147, 116, 37); 
     color:bisque;
 }
+header{
+    padding:34px;
+    margin:0;
+   text-align: center;
+}
+#footer{
+    text-align: center;
+    color: sandybrown;
+    background-color: blanchedalmond
+
+}
+.about{
+    text-decoration: darkgoldenrod;
+}
+#button{
+    padding:34px;
+}
+li{
+    list-style: none;
+    display:inline;
+    padding: 0 4px;
+   
+}
+#contact{
+ text-align: center;
+  color: white;
+}
+.about{
+display:inline-block;
+}
+nav{
+    display: flex;
+   
+  margin: 0px;
+  justify-content: flex-end;
+}
+
