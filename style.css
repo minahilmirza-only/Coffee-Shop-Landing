@@ -1,76 +1,230 @@
-.page-section {
-  min-height: 100vh; /* Takes full screen height */
-  padding: 80px 20px;
-  display: flex;
-  align-items: center;
-}
-.menu ul {
-  padding: 10px;
+/* Base Resets */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.menu li {
+/* Enable smooth scrolling across sections */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- Sticky Navigation Header --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  padding: 18px 8%;
+  background-color: #2b1113; /* Deep coffee brown */
+  z-index: 1000;
 }
 
-.menu img {
-  width: 60px;
-  height: 60px;
+.navbar .logo {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 
-body {
-  background-color: #4b4038;
-  color: bisque;
-}
-header {
-  margin: 0;
-  text-align: center;
-}
-
-#footer {
-  text-align: center;
-  color: sandybrown;
-  background-color: blanchedalmond;
-}
-
-#button {
-  padding: 34px;
-}
-
-li {
+.navbar ul {
+  display: flex;
   list-style: none;
-  display: inline;
-  padding: 0 4px;
+  gap: 25px;
 }
 
-#contact {
+.navbar ul li a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #e58e26; /* Orange highlight */
+}
+
+/* --- Full Screen Section Layout --- */
+.page-section {
+  min-height: 100vh;
+  padding: 100px 8% 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* --- 1. HERO SECTION --- */
+.hero-section {
+  background-color: #2b1113;
+  color: #ffffff;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text .subtitle {
+  color: #e58e26;
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+.hero-text h1 {
+  font-size: 2.6rem;
+  margin: 15px 0;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  color: #cccccc;
+  margin-bottom: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 10px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #e58e26;
+  color: #fff;
+}
+
+.btn-secondary {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.hero-img img {
+  max-width: 380px;
+  height: auto;
+}
+
+/* --- 2. ABOUT SECTION --- */
+.about-section {
+  background-color: #fdfaf7; /* Cream background */
+  color: #222222;
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+.about-text h2 {
+  font-size: 2.2rem;
+}
+
+.accent-line {
+  width: 60px;
+  height: 4px;
+  background-color: #e58e26;
+  margin: 10px 0 20px;
+  border-radius: 2px;
+}
+
+.accent-line.center {
+  margin: 10px auto 30px;
+}
+
+.about-text p {
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Circular photo matching reference */
+.circle-photo {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --- 3. MENU SECTION --- */
+.menu-section {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  color: white;
 }
 
-.about {
-  display: inline-block;
-  text-decoration: darkgoldenrod;
+.menu-categories {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
-nav {
-  display: flex;
-  margin: 0px;
-  justify-content: flex-end;
-  padding: 0px;
+.menu-card {
+  background-color: #262626;
+  padding: 25px 20px;
+  border-radius: 12px;
+  width: 280px;
+  text-align: left;
 }
 
-ul {
-  display: flex;
-  gap: 20px;
+.menu-card h3 {
+  text-align: center;
+  color: #e58e26;
+  margin-bottom: 15px;
 }
-h3 ul {
-  width: 20vw;
-  height: 20vh;
+
+.menu-card ul {
+  list-style: none;
 }
-.logo-badge {
+
+.menu-card li {
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.menu-card img {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.menu-card label {
+  font-size: 0.9rem;
+}
+
+#order-btn {
+  background-color: #e58e26;
+  color: #fff;
+  border: none;
+  padding: 12px 35px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* --- 4. FOOTER SECTION --- */
+.footer-section {
+  background-color: #111111;
+  color: #aaa;
+  text-align: center;
+  padding: 50px 20px;
+  border-top: 1px solid #333;
+}
+
+.footer-section h2 {
+  color: #fff;
+  margin-bottom: 10px;
 }

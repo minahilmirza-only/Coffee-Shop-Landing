@@ -6,132 +6,142 @@
     <title>Espresso Yourself | Coffee Shop</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
+    <!-- Sticky Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">☕ Espresso Yourself</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#menu">Menu</a></li>
-<li><a href="#contact">Contact</a></li>
-
-    <div class="logo-badge">
-    <img src="image.png" alt="Coffee" width="170px" height="170px">
-</div>
-    <h1>Espresso Yourself</h1>
-    <p>Better Latte Than Never</p>
-    
-</header>
-
-<main>
-     <section class="about">
-        <h2>About Us</h2>
-        <p>
-            Welcome to Espresso Yourself! It is a cozy corner for coffee lovers, tea enthusiasts,
-            and anyone with a sweet tooth. Whether you're grabbing a quick espresso
-            shot or settling in with a slice of cake, we're here to make your day
-            a little better — one cup at a time.
-        </p>
-    </section>
-
-    <form id="order-form">
-        <section class="menu">
-            <h2>Our Menu</h2>
-
-            <div class="menu-category coffee">
-                
-                <h3>Coffee</h3>
-                <ul>
-                    <li>
-                        <input type="checkbox" id="espresso" name="item" value="250">
-                        <img src="espresso-coffee.jpg" alt="Espresso">
-                        <label for="espresso">Espresso - Rs. 250</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="americano" name="item" value="300">
-                        <img src="americano-coffee.jpg" alt="Americano">
-                        <label for="americano">Americano - Rs. 300</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="latte" name="item" value="350">
-                        <img src="lattee-coffee.jpg" alt="Latte">
-                        <label for="latte">Latte - Rs. 350</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="cappuccino" name="item" value="400">
-                        <img src="cappucino-coffee.jpg" alt="Cappuccino">
-                        <label for="cappuccino">Cappuccino - Rs. 400</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="mocha" name="item" value="450">
-                        <img src="mocha-coffee.jpg" alt="Mocha">
-                        <label for="mocha">Mocha - Rs. 450</label>
-                    </li>
-                </ul>
-                
+    <main>
+        <!-- 1. HOME SECTION -->
+        <section id="home" class="page-section hero-section">
+            <div class="hero-text">
+                <span class="subtitle">Best Coffee</span>
+                <h1>Make your day great with our special coffee!</h1>
+                <p>Better Latte Than Never — Welcome to your cozy coffee paradise.</p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn btn-primary">Order Now</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                </div>
             </div>
-
-            <div class="menu-category tea">
-                <h3>Tea</h3>
-                <ul>
-                    <li>
-                        <input type="checkbox" id="green-tea" name="item" value="200">
-                        <img src="green-tea.jpg" alt="Green Tea">
-                        <label for="green-tea">Green Tea - Rs. 200</label>
-                        
-                    </li>
-                    <li>
-                        <input type="checkbox" id="black-tea" name="item" value="150">
-                        <img src="black-tea.jpg" alt="Black Tea">
-                        <label for="black-tea">Black Tea - Rs. 150</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="herbal-tea" name="item" value="250">
-                        <img src="herbal-tea.jpg" alt="Herbal Tea">
-                        <label for="herbal-tea">Herbal Tea - Rs. 250</label>
-                    </li>
-                </ul>
+            <div class="hero-img">
+                <img src="image.png" alt="Coffee Hero">
             </div>
-
-            <div class="menu-category pastries">
-                <h3>Pastries</h3>
-                <ul>
-                    <li>
-                        <input type="checkbox" id="croissant" name="item" value="300">
-                        <img src="croisant.jpg" alt="Croisant">
-                        <label for="croisant">Croisant - Rs. 300</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="muffin" name="item" value="250">
-                        <img src="Muffins.jpg" alt="Muffin">
-                        <label for="muffin">Muffins - Rs. 250</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="chocolate-cake" name="item" value="400">
-                        <img src="choclate-cake.jpg" alt="Choclate Cake">
-                        <label for="choclate-cake">Choclate Cake - Rs. 400</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="cheesecake" name="item" value="450">
-                        <img src="cheese-cake.jpg" alt="Cheesecake">
-                        <label for="cheesecake">Cheesecake - Rs. 450</label>
-                    </li>
-                </ul>
-            </div>
-            <br> <br>
-            
-            <button type="submit" id="order-btn">Place Order</button>
         </section>
-    </form>
-</main>
 
-<footer id="contact">
-    <h2>Visit Us</h2>
-    <p>123 Coffee Lane, Gujrat, Pakistan</p>
-    <p>Open Daily : 9:00 AM - 11:00 PM</p>
-</footer>
+        <!-- 2. ABOUT SECTION -->
+        <section id="about" class="page-section about-section">
+            <div class="about-img">
+                <!-- Using a circular photo frame -->
+                <img src="image.png" alt="About Espresso Yourself" class="circle-photo">
+            </div>
+            <div class="about-text">
+                <h2>ABOUT US</h2>
+                <div class="accent-line"></div>
+                <p>
+                    Welcome to Espresso Yourself! It is a cozy corner for coffee lovers, tea enthusiasts,
+                    and anyone with a sweet tooth. Whether you're grabbing a quick espresso
+                    shot or settling in with a slice of cake, we're here to make your day
+                    a little better — one cup at a time.
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. MENU SECTION -->
+        <section id="menu" class="page-section menu-section">
+            <h2>OUR MENU</h2>
+            <div class="accent-line center"></div>
+
+            <form id="order-form">
+                <div class="menu-categories">
+                    
+                    <!-- Coffee Category -->
+                    <div class="menu-card">
+                        <h3>Coffee</h3>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="espresso" name="item" value="250">
+                                <img src="espresso-coffee.jpg" alt="Espresso">
+                                <label for="espresso">Espresso - Rs. 250</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="americano" name="item" value="300">
+                                <img src="americano-coffee.jpg" alt="Americano">
+                                <label for="americano">Americano - Rs. 300</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="latte" name="item" value="350">
+                                <img src="lattee-coffee.jpg" alt="Latte">
+                                <label for="latte">Latte - Rs. 350</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Tea Category -->
+                    <div class="menu-card">
+                        <h3>Tea</h3>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="green-tea" name="item" value="200">
+                                <img src="green-tea.jpg" alt="Green Tea">
+                                <label for="green-tea">Green Tea - Rs. 200</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="black-tea" name="item" value="150">
+                                <img src="black-tea.jpg" alt="Black Tea">
+                                <label for="black-tea">Black Tea - Rs. 150</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="herbal-tea" name="item" value="250">
+                                <img src="herbal-tea.jpg" alt="Herbal Tea">
+                                <label for="herbal-tea">Herbal Tea - Rs. 250</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Pastries Category -->
+                    <div class="menu-card">
+                        <h3>Pastries</h3>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="croissant" name="item" value="300">
+                                <img src="croisant.jpg" alt="Croissant">
+                                <label for="croissant">Croissant - Rs. 300</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="muffin" name="item" value="250">
+                                <img src="Muffins.jpg" alt="Muffin">
+                                <label for="muffin">Muffins - Rs. 250</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="cheesecake" name="item" value="450">
+                                <img src="cheese-cake.jpg" alt="Cheesecake">
+                                <label for="cheesecake">Cheesecake - Rs. 450</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <button type="submit" id="order-btn">Place Order</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- 4. FOOTER / CONTACT SECTION -->
+    <footer id="contact" class="footer-section">
+        <h2>Visit Us</h2>
+        <p>123 Coffee Lane, Gujrat, Pakistan</p>
+        <p>Open Daily : 9:00 AM - 11:00 PM</p>
+    </footer>
 
 </body>
 </html>
