@@ -228,3 +228,28 @@ html {
   color: #fff;
   margin-bottom: 10px;
 }
+
+/* Active Nav Link Highlight */
+.navbar ul li a.active {
+  color: #e58e26;
+  border-bottom: 2px solid #e58e26;
+  padding-bottom: 4px;
+}
+
+/* Button Hover State */
+#order-btn:hover {
+  background-color: #d47d15;
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+/* Menu card item hover effect */
+.menu-card li {
+  padding: 6px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.menu-card li:hover {
+  background-color: #333;
+}
