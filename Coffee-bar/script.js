@@ -6,23 +6,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll(".page-section, footer");
 
   // -------------------------------------------------------------
-  // 1. Create Dynamic Order Summary Banner inside Menu Section
+  // 1. Dynamic Order Summary Banner
   // -------------------------------------------------------------
-  const menuSection = document.querySelector(".menu-section");
   const totalContainer = document.createElement("div");
   totalContainer.className = "order-summary";
   totalContainer.style.cssText = `
     margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 1.2rem;
     font-weight: bold;
     color: #e58e26;
   `;
   totalContainer.innerHTML = `Total Amount: Rs. <span id="total-price">0</span>`;
+
+  // Insert total price summary before order submit button
   orderForm.insertBefore(totalContainer, orderBtn);
 
   const totalPriceSpan = document.getElementById("total-price");
 
-  // Calculate live total on checkbox change
+  // Calculate live total on checkbox toggles
   function calculateTotal() {
     let total = 0;
     checkboxes.forEach((cb) => {
@@ -38,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // -------------------------------------------------------------
-  // 2. Handle Form Submission & Show Order Confirmation
+  // 2. Form Submission Alert (DOM-Independent Label Retrieval)
   // -------------------------------------------------------------
   orderForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -46,8 +48,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const selectedItems = [];
     checkboxes.forEach((cb) => {
       if (cb.checked) {
-        const itemLabel = cb.nextElementSibling.nextElementSibling.textContent;
-        selectedItems.push(itemLabel);
+        // Direct target match via input ID to label attribute
+        const label = document.querySelector(`label[for="${cb.id}"]`);
+        if (label) {
+          selectedItems.push(label.textContent);
+        }
       }
     });
 
@@ -63,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     alert(orderMessage);
 
-    // Reset Form
+    // Reset Form and calculate back to zero
     orderForm.reset();
     totalPriceSpan.textContent = "0";
   });
