@@ -216,17 +216,77 @@ html {
 }
 
 /* --- 4. FOOTER SECTION --- */
+/* --- 4. FOOTER / CONTACT SECTION (ENHANCED) --- */
 .footer-section {
   background-color: #111111;
-  color: #aaa;
-  text-align: center;
-  padding: 50px 20px;
-  border-top: 1px solid #333;
+  color: #cccccc;
+  padding: 80px 8% 30px;
+  border-top: 1px solid #2a2a2a;
 }
 
-.footer-section h2 {
-  color: #fff;
-  margin-bottom: 10px;
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-col.brand-col h3 {
+  color: #e58e26;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.footer-col.brand-col p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: #aaaaaa;
+}
+
+.footer-col h4 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 18px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.footer-col h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 3px;
+  background-color: #e58e26;
+  border-radius: 2px;
+}
+
+.footer-col p {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #bbbbbb;
+}
+
+.footer-col p strong {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid #222222;
+  font-size: 0.85rem;
+  color: #777777;
 }
 
 /* Active Nav Link Highlight */
