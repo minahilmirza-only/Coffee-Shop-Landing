@@ -5,9 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".navbar ul li a");
   const sections = document.querySelectorAll(".page-section, footer");
 
-  // -------------------------------------------------------------
-  // 1. Dynamic Order Summary Banner
-  // -------------------------------------------------------------
+  
   const totalContainer = document.createElement("div");
   totalContainer.className = "order-summary";
   totalContainer.style.cssText = `
@@ -39,16 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
     cb.addEventListener("change", calculateTotal);
   });
 
-  // -------------------------------------------------------------
-  // 2. Form Submission Alert (DOM-Independent Label Retrieval)
-  // -------------------------------------------------------------
+  
   orderForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const selectedItems = [];
     checkboxes.forEach((cb) => {
       if (cb.checked) {
-        // Direct target match via input ID to label attribute
+       
         const label = document.querySelector(`label[for="${cb.id}"]`);
         if (label) {
           selectedItems.push(label.textContent);
@@ -57,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     if (selectedItems.length === 0) {
-      alert("⚠️ Please select at least one item from the menu to place an order!");
+      alert(" Please select at least one item from the menu to place an order!");
       return;
     }
 
@@ -73,9 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     totalPriceSpan.textContent = "0";
   });
 
-  // -------------------------------------------------------------
-  // 3. Active Navigation Link Highlighting on Scroll
-  // -------------------------------------------------------------
+  
   window.addEventListener("scroll", () => {
     let currentSection = "";
 

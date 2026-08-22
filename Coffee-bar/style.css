@@ -216,7 +216,7 @@ html {
 }
 
 /* --- 4. FOOTER SECTION --- */
-/* --- 4. FOOTER / CONTACT SECTION (ENHANCED) --- */
+
 .footer-section {
   background-color: #111111;
   color: #cccccc;
@@ -303,7 +303,6 @@ html {
   transition: all 0.2s ease;
 }
 
-/* Menu card item hover effect */
 .menu-card li {
   padding: 6px;
   border-radius: 6px;
